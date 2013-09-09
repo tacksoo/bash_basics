@@ -1,3 +1,12 @@
+# this is not an executable script ;)
+
+# clone an existing repository
+git clone git://github.com/tacksoo/bash_basics.git
+
+# or start tracking a project
+git init
+
+
 # show current git configuration
 git config -l
 
@@ -7,8 +16,20 @@ git config --global user.name "Default User"
 git config --global user.email "user@default.com"
 
 
-# start tracking a project
-git init
+# show remote repositories
+git remote -v
+
+
+# add a remote repository 
+git remote add origin git://github.com/someone/somerepo.git
+
+
+# get code from remote 
+git fetch origin
+
+
+# merge remote's code with the code you have
+git merge origin
 
 
 # start tracking a file
@@ -64,3 +85,4 @@ git reset HEAD somefile.txt
 git checkout -- somefile.txt
 
 
+#
