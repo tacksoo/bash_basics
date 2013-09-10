@@ -69,6 +69,7 @@ echo $PATH
 # show the type of the a file
 file original.txt
 
+# download a file from the web 
+curl -o readme.txt https://raw.github.com/tacksoo/bash_basics/master/README.md
+
 # 
-
-
