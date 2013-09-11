@@ -72,4 +72,10 @@ file original.txt
 # download a file from the web 
 curl -o readme.txt https://raw.github.com/tacksoo/bash_basics/master/README.md
 
+# redo previous command
+!!
+
+# find about the location of a command
+which bash
+
 # 
