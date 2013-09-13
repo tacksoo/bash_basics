@@ -52,6 +52,9 @@ echo "Hello World" > original.txt
 # you can append to a file as well
 echo "Hello Again World" >> original.txt
 
+# simple arithmetic with echo
+echo $((1+1))
+
 # print out the first ten lines of a file
 # you can also use the -n option to specify how many lines you want 
 head original.txt
