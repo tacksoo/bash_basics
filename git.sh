@@ -98,3 +98,7 @@ git checkout master
 git merge somebodyelse-master
 git push origin master
 
+# delete branch
+git branch -d somebodyelse-master
+
+
