@@ -69,6 +69,9 @@ env
 # show the current PATH
 echo $PATH
 
+# generate a random number
+echo $RANDOM
+
 # show the type of the a file
 file original.txt
 
