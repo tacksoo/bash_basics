@@ -85,4 +85,24 @@ git reset HEAD somefile.txt
 git checkout -- somefile.txt
 
 
-#
+# create a branch for tracking a remote repository
+git checkout -b somebodyelse-master master
+
+
+# pull the changes in the remote repository
+git pull https://github.com/somebodyelse/some-repo.git master
+
+
+# merge the changes and update your remote
+git checkout master
+git merge somebodyelse-master
+git push origin master
+
+# delete branch
+git branch -d somebodyelse-master
+
+
+# if you refer to that remote repository often, add it as one of your remotes
+# I will refer to it as 'upstream'
+git remote add upstream https://github.com/somebodyelse/some-repo.git 
+

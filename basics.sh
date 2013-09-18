@@ -39,6 +39,12 @@ mv copy.txt clone.txt
 # delete file
 rm original.txt clone.txt
 
+# create a directory
+mkdir folder
+
+# remove a directory
+rmdir folder
+
 # bang (!) repeats the last command starting with the first letter after it
 !t  # executes 'touch original.txt'
 
