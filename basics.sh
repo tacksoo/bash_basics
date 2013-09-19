@@ -90,4 +90,14 @@ curl -o readme.txt https://raw.github.com/tacksoo/bash_basics/master/README.md
 # find about the location of a command
 which bash
 
-# 
+# globally search a regular expression and print - grep
+# print out lines that contain word 'the' in readme.txt
+grep 'the' readme.txt
+
+# print out lines that contain the whole the word 'the' in readme.txt
+grep -w 'the' readme.txt
+
+# ignore case
+grep -i 'the' readme.txt
+
+
