@@ -100,4 +100,15 @@ grep -w 'the' readme.txt
 # ignore case
 grep -i 'the' readme.txt
 
+# count how many line contain the word 'the'
+grep -c 'the' readme.txt
+
+# match 'the' starting with lowercase or uppercase t
+grep '[Tthe]' readme.txt
+
+# match any three numbers in a row
+grep '[0-9][0-9][0-9]' readme.txt
+
+# match zipcode
+grep -w '[0-9]\{5\}' readme.txt
 
