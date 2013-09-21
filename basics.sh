@@ -52,6 +52,9 @@ rmdir folder
 # the file descriptor for standard output (stdout) is 1
 echo "Hello World" 
 
+# print without a new line
+echo -n "Hello World"
+
 # redirect stdout to a file
 echo "Hello World" > original.txt
 
@@ -60,6 +63,9 @@ echo "Hello Again World" >> original.txt
 
 # simple arithmetic with echo
 echo $((1+1))
+
+# generate strings from A to Z
+echo {A..Z}
 
 # print out the first ten lines of a file
 # you can also use the -n option to specify how many lines you want 
@@ -111,4 +117,11 @@ grep '[0-9][0-9][0-9]' readme.txt
 
 # match zipcode
 grep -w '[0-9]\{5\}' readme.txt
+
+# match the word 'the' that start from the beginning of a line
+grep '^the' readme.txt
+
+# match the word 'the' at the end of a line
+grep 'the$' readme.txt
+
 
