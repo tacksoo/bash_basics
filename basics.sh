@@ -109,8 +109,11 @@ grep -i 'the' readme.txt
 # count how many line contain the word 'the'
 grep -c 'the' readme.txt
 
+# show the line number of where the match occurs
+grep -n 'the' readme.txt
+
 # match 'the' starting with lowercase or uppercase t
-grep '[Tthe]' readme.txt
+grep '[Tt]he' readme.txt
 
 # match any three numbers in a row
 grep '[0-9][0-9][0-9]' readme.txt
