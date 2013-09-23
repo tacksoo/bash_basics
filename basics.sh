@@ -61,6 +61,9 @@ echo "Hello World" > original.txt
 # you can append to a file as well
 echo "Hello Again World" >> original.txt
 
+# you can have more than one command in one line by using the semi-colon
+echo "excuse me?" ; echo "come again?"
+
 # simple arithmetic with echo
 echo $((1+1))
 
