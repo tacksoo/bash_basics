@@ -12,5 +12,5 @@ elif [ $grade -ge 80 ]; then
 elif [ $grade -ge 70 ]; then
    echo "You got a C. Not bad."
 else
-   echo "Time to work on some extra credit assginments"
+   echo "Time to work on some extra credit assignments"
 fi
