@@ -130,4 +130,7 @@ grep '^the' readme.txt
 # match the word 'the' at the end of a line
 grep 'the$' readme.txt
 
+# check every file in the current directory for the word 'the' and print out the filename
+grep -l 'the' *
+
 
