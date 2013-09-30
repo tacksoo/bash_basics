@@ -133,4 +133,12 @@ grep 'the$' readme.txt
 # check every file in the current directory for the word 'the' and print out the filename
 grep -l 'the' *
 
+greeting="HELLO"
+
+# translate all uppercase characters to lowercase
+echo $greeting | tr [:upper:] [:lower:]
+
+# uppercase to lowercase using character ranges instead
+echo $greeting | tr [A-Z] [a-z]
+
 
