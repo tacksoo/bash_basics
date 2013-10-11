@@ -141,4 +141,18 @@ echo $greeting | tr [:upper:] [:lower:]
 # uppercase to lowercase using character ranges instead
 echo $greeting | tr [A-Z] [a-z]
 
+# sorts a text file line by line lexicographically  
+sort readme.txt
+
+# sort and print only unique lines
+sort -u readme.txt
+
+# reverse sort
+sort -r readme.txt
+
+# do a numeric sort  i.e. 10 appears after 9 not 1 
+sort -n readme.txt
+
+# sort from a particular field, in this case start sorting from field 2 and end at field 2
+sort -k2,2 readme.txt
 
