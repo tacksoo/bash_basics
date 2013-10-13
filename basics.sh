@@ -156,3 +156,16 @@ sort -n readme.txt
 # sort from a particular field, in this case start sorting from field 2 and end at field 2
 sort -k2,2 readme.txt
 
+# the stream editor command is useful for adding/deleting/changing words in a text file
+# the following command appends the word 'Start: ' at the beginning of every line 
+sed 's/^/Start: /' readme.txt
+
+# this would only apply to the first five lines
+sed '1,5s/^/Start: /' readme.txt
+
+# you can also delete words using sed, the following will delete all the words 'the'
+sed 's/the//' readme.txt
+
+# of course you can also replace words 
+sed 's/teh/the/' readme.txt
+
