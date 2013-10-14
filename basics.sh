@@ -169,3 +169,20 @@ sed 's/the//' readme.txt
 # of course you can also replace words 
 sed 's/teh/the/' readme.txt
 
+# find out the access, modify, and change time for a file
+stat readme.txt
+
+# find all the files ending with .txt from the current directory
+find . -name '*.txt' -print 
+
+# find all files that were modified later than readme.txt
+find . -newer readme.txt -print 
+
+# find all files created in the last 3 days (ctime, mtime, atime)
+find . -ctime -3 -print
+
+# look for the word 'the' in the files modified in the last 3 days
+find . -mtime -3 -print | xargs grep 'the'
+
+
+
