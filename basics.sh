@@ -184,5 +184,10 @@ find . -ctime -3 -print
 # look for the word 'the' in the files modified in the last 3 days
 find . -mtime -3 -print | xargs grep 'the'
 
+# look for files 'newer' than readme.txt
+find . -newer readme.txt -print
+
+
+
 
 
