@@ -1,0 +1,17 @@
+
+<project name="Create a zip file of the script files" default="zip">
+
+
+  <!-- 'ant -p -v' lists all targets' -->
+
+  <target name="zip">
+    <zip destfile="scripts.zip" basedir="." includes="*.sh" />
+  </target>
+
+  <target name="clean">
+    <delete file="scripts.zip" />
+  </target>
+
+
+
+</project>
