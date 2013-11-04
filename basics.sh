@@ -187,7 +187,10 @@ find . -mtime -3 -print | xargs grep 'the'
 # look for files 'newer' than readme.txt
 find . -newer readme.txt -print
 
+# look for the word 'the' in every "file"
+find . -type f | xargs grep 'the'
 
-
-
+# look for the word 'the' in every "file" including files that contain a space
+# http://serverfault.com/questions/268368/how-can-i-handle-spaces-in-file-names-when-using-xargs-on-find-results
+find . -type f -print0 | xargs -0 grep 'the'
 
