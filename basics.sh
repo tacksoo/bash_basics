@@ -194,3 +194,12 @@ find . -type f | xargs grep 'the'
 # http://serverfault.com/questions/268368/how-can-i-handle-spaces-in-file-names-when-using-xargs-on-find-results
 find . -type f -print0 | xargs -0 grep 'the'
 
+
+# heredoc http://en.wikipedia.org/wiki/Here_document
+cat << EOF
+
+   Write a wall of text without echo commands
+   
+EOF
+
+
