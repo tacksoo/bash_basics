@@ -169,6 +169,9 @@ sed 's/the//' readme.txt
 # of course you can also replace words 
 sed 's/teh/the/' readme.txt
 
+# comment out any statement that starts with Log
+sed 's/Log/\/\/&/' readme.txt
+
 # find out the access, modify, and change time for a file
 stat readme.txt
 
