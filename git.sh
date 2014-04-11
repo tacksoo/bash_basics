@@ -106,3 +106,19 @@ git branch -d somebodyelse-master
 # I will refer to it as 'upstream'
 git remote add upstream https://github.com/somebodyelse/some-repo.git 
 
+
+# stash your changes
+git stash
+
+# apply latest stash
+git stash apply
+git stash pop   # this delete the stash
+
+# clear stash
+git stash clear
+
+
+# stop tracking changes of a file 
+git update-index --assume-unchanged file.txt
+
+
