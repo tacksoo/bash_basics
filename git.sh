@@ -112,7 +112,10 @@ git stash
 
 # apply latest stash
 git stash apply
-git stash pop   # this delete the stash
+git stash pop   # this deletes the stash and then deletes it
+
+# remove stash using its name
+git stash drop stash@{0}
 
 # clear stash
 git stash clear
