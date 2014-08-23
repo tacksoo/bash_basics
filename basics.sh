@@ -206,3 +206,6 @@ cat << EOF
 EOF
 
 
+# create a one megabyte file filled with zeros
+dd if=/dev/zero of=foobar count=1 bs=1M
+
