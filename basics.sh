@@ -93,6 +93,9 @@ file original.txt
 # download a file from the web 
 curl -o readme.txt https://raw.github.com/tacksoo/bash_basics/master/README.md
 
+# download file with its original filename
+curl -O https://bootstrap.pypa.io/get-pip.py
+
 # redo previous command
 !!
 
@@ -209,3 +212,6 @@ EOF
 # create a one megabyte file filled with zeros
 dd if=/dev/zero of=foobar count=1 bs=1M
 
+
+# http://explainshell.com/explain?cmd=iptables+-t+nat+-A+PREROUTING+-p+tcp+--dport+80+-j+REDIRECT+--to-port+8080
+iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 8080
