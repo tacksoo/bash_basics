@@ -112,7 +112,7 @@ grep -w 'the' readme.txt
 # ignore case
 grep -i 'the' readme.txt
 
-# count how many line contain the word 'the'
+# count how many times the word 'the' matched
 grep -c 'the' readme.txt
 
 # show the line number of where the match occurs
