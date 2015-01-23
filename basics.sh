@@ -87,6 +87,23 @@ echo $PATH
 # generate a random number
 echo $RANDOM
 
+# create your own environment variable
+MESSAGE="UNIX is fun!"
+
+# cut out the third field of a string delimited by a space
+echo $MESSAGE | cut -f3 -d" "
+
+# count how characters there are in a string (-w for words)
+echo $MESSAGE | wc -c
+
+greeting="HELLO"
+
+# translate all uppercase characters to lowercase
+echo $greeting | tr [:upper:] [:lower:]
+
+# uppercase to lowercase using character ranges instead
+echo $greeting | tr [A-Z] [a-z]
+
 # show the type of the a file
 file original.txt
 
@@ -135,14 +152,6 @@ grep 'the$' readme.txt
 
 # check every file in the current directory for the word 'the' and print out the filename
 grep -l 'the' *
-
-greeting="HELLO"
-
-# translate all uppercase characters to lowercase
-echo $greeting | tr [:upper:] [:lower:]
-
-# uppercase to lowercase using character ranges instead
-echo $greeting | tr [A-Z] [a-z]
 
 # sorts a text file line by line lexicographically  
 sort readme.txt
