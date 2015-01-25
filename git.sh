@@ -68,6 +68,8 @@ git log
 # show one line summary of the commits
 git log --pretty=oneline
 
+# show tree-like view of the commits
+git log --graph --oneline
 
 # show summary of commit per user
 git shortlog -s
