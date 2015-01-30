@@ -209,7 +209,6 @@ find . -type f | xargs grep 'the'
 # http://serverfault.com/questions/268368/how-can-i-handle-spaces-in-file-names-when-using-xargs-on-find-results
 find . -type f -print0 | xargs -0 grep 'the'
 
-
 # heredoc http://en.wikipedia.org/wiki/Here_document
 cat << EOF
 
@@ -217,10 +216,15 @@ cat << EOF
    
 EOF
 
+# show today's date and time
+date
+
+# show today's date with different time zone: 
+# change the TZ variable to TZ="America/New_York", TZ="Asia/Seoul", TZ="Europe/Berlin", etc
+TZ="America/Los_Angeles" date
 
 # create a one megabyte file filled with zeros
 dd if=/dev/zero of=foobar count=1 bs=1M
-
 
 # http://explainshell.com/explain?cmd=iptables+-t+nat+-A+PREROUTING+-p+tcp+--dport+80+-j+REDIRECT+--to-port+8080
 iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 8080
