@@ -100,8 +100,13 @@ git checkout master
 git merge somebodyelse-master
 git push origin master
 
+
 # delete branch
 git branch -d somebodyelse-master
+
+
+# show all local and remote branch
+git branch -a
 
 
 # if you refer to that remote repository often, add it as one of your remotes
@@ -112,12 +117,15 @@ git remote add upstream https://github.com/somebodyelse/some-repo.git
 # stash your changes
 git stash
 
+
 # apply latest stash
 git stash apply
 git stash pop   # this deletes the stash and then deletes it
 
+
 # remove stash using its name
 git stash drop stash@{0}
+
 
 # clear stash
 git stash clear
