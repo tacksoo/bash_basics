@@ -2,6 +2,10 @@
 # you can execute this file by typing 'sh basics.sh'
 # not that it does anything useful though
 
+# run the following command to install 'emojify'
+# sudo sh -c "curl https://raw.githubusercontent.com/mrowa44/emojify/master/emojify -o /usr/local/bin/emojify && chmod +x /usr/local/bin/emojify"
+# https://github.com/mrowa44/emojify
+
 # lists files 
 ls
 
