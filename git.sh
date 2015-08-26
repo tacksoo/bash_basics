@@ -109,6 +109,10 @@ git branch -d somebodyelse-master
 git branch -a
 
 
+# delete a branch on remote origin
+git push origin --delete some-branch
+
+
 # if you refer to that remote repository often, add it as one of your remotes
 # I will refer to it as 'upstream'
 git remote add upstream https://github.com/somebodyelse/some-repo.git 

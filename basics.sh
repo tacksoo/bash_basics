@@ -123,6 +123,18 @@ curl -O https://bootstrap.pypa.io/get-pip.py
 # find about the location of a command
 which bash
 
+# archive the contents of a folder
+tar cvf archive.tar somedir
+
+# archieve the contents of a folder and compress it
+tar zcvf archive.tar.gz somedir
+
+# unarchive the contents of an archive
+tar xvf archive.tar.gz  
+
+# list contents of an archive
+tar -tf archive.tar.gz
+
 # globally search a regular expression and print - grep
 # print out lines that contain word 'the' in readme.txt
 grep 'the' readme.txt
