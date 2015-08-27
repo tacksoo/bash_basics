@@ -133,7 +133,21 @@ tar zcvf archive.tar.gz somedir
 tar xvf archive.tar.gz  
 
 # list contents of an archive
-tar -tf archive.tar.gz
+tar tf archive.tar.gz
+
+# compress a file and see the original go away
+gzip somefile
+
+# decompress a file and see the original go away
+gzip -d somefile.gz
+
+# compress a file and keep original
+gzip -c somefile > somefile.gz
+
+# decompress a file and keep original
+gzip -cd somefile.gz > somefile
+
+# bzip2 can offer better compression and can be used just like gzip 
 
 # globally search a regular expression and print - grep
 # print out lines that contain word 'the' in readme.txt
