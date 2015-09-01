@@ -1,5 +1,7 @@
 # this is not an executable script ;)
 
+# generate .gitignore files at https://www.gitignore.io/
+
 # clone an existing repository
 git clone git://github.com/tacksoo/bash_basics.git
 
@@ -44,6 +46,10 @@ git status
 git commit -m 'added readme'
 
 
+# add and commit
+git commit -am 'modified readme'
+
+
 # compare the working directory with what's on the staging area
 git diff
 
@@ -59,6 +65,19 @@ git rm readme.txt
 
 # move files in git
 git mv from.txt to.txt
+
+
+# remove latest commit (data loss!)
+git reset --hard HEAD~1
+
+
+# undo latest commit (keep changes in index)
+git reset --soft HEAD~1
+
+
+# squash last three commits into one interactively
+# need to specify which commits to squash
+git rebase -i HEAD~3
 
 
 # look at past commit messages
@@ -120,7 +139,7 @@ git remote add upstream https://github.com/somebodyelse/some-repo.git
 
 # stash your changes
 git stash
-
+# 
 
 # apply latest stash
 git stash apply
