@@ -149,6 +149,8 @@ gzip -cd somefile.gz > somefile
 
 # bzip2 can offer better compression and can be used just like gzip 
 
+# https://gist.githubusercontent.com/tacksoo/dbb221a6ea2c605cf59e/raw/d05e22635ce4d1a67c52c0180fbf5a34d25460bc/words.txt
+
 # globally search a regular expression and print - grep
 # print out lines that contain word 'the' in readme.txt
 grep 'the' readme.txt
