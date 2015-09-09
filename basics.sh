@@ -255,6 +255,20 @@ date
 # change the TZ variable to TZ="America/New_York", TZ="Asia/Seoul", TZ="Europe/Berlin", etc
 TZ="America/Los_Angeles" date
 
+# install some programs in ubuntu
+sudo apt-get install imagemagick
+sudo apt-get install fortune
+sudo apt-get install dict
+
+# resize an image using imagemagick
+convert cute.gif -resize 200% cute_big.gif
+
+# look up a word using dict
+dict love
+
+# print a quote using fortune
+fortune  # note: you need to add /usr/games to your path
+
 # create a one megabyte file filled with zeros
 dd if=/dev/zero of=foobar count=1 bs=1M
 
