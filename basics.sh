@@ -272,5 +272,8 @@ fortune  # note: you need to add /usr/games to your path
 # create a one megabyte file filled with zeros
 dd if=/dev/zero of=foobar count=1 bs=1M
 
+# show listening ports and attached processes 
+netstat -nlp
+
 # http://explainshell.com/explain?cmd=iptables+-t+nat+-A+PREROUTING+-p+tcp+--dport+80+-j+REDIRECT+--to-port+8080
 iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 8080
