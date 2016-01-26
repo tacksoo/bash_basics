@@ -97,6 +97,9 @@ MESSAGE="UNIX is fun!"
 # cut out the third field of a string delimited by a space
 echo $MESSAGE | cut -f3 -d" "
 
+# cut out the first four characters
+echo $MESSAGE | cut -c1-4
+
 # count how characters there are in a string (-w for words)
 echo $MESSAGE | wc -c
 
@@ -216,6 +219,9 @@ sed 's/teh/the/' readme.txt
 # comment out any statement that starts with Log
 sed 's/Log/\/\/&/' readme.txt
 
+# delete all leading spaces of a string
+sed 's/^[ \t]*//' readme.txt  
+
 # find out the access, modify, and change time for a file
 stat readme.txt
 
@@ -259,6 +265,7 @@ TZ="America/Los_Angeles" date
 sudo apt-get install imagemagick
 sudo apt-get install fortune
 sudo apt-get install dict
+sudo apt-get install weather-util
 
 # resize an image using imagemagick
 convert cute.gif -resize 200% cute_big.gif
