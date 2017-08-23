@@ -1,3 +1,1 @@
-echo "Hello! What is your name" 
-read name 
-echo "Welcome, $name"
+echo "Hello! My name is Taylor" 
