@@ -7,6 +7,8 @@ if [ "$answer" = "yes" ]; then
    echo "Smile :)";
 elif [ "$answer" = "no" ]; then
     echo "Cheer up :(";
+elif [ "$answer" = "elephant" ]; then
+    echo "You cray";
 else
    echo "Still Smile :)"
 fi
