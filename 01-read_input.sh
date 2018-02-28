@@ -12,5 +12,5 @@ echo 'Your name was stored in $name'
 # filename and create an empty file named after it
 echo "What would you like to name your file? Please include the extension."
 read name
-touch name
+touch $name
 
