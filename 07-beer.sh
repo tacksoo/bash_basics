@@ -20,5 +20,5 @@ while [ $count -ge 0 ]; do
 
 done
 
-
-
+# exercise: implement another counting song (such as 12 days of Christmas) 
+# using loops and if statements.
