@@ -16,3 +16,4 @@ read $filename
 echo "Creating $filename"
 touch $filename
 echo "$filename successfully created"
+echo "Thank you"
