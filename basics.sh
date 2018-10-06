@@ -1,4 +1,4 @@
-# some basic unix commands 
+# some basic unix commands
 # you can execute this file by typing 'sh basics.sh'
 # not that it does anything useful though
 
@@ -6,7 +6,7 @@
 # sudo sh -c "curl https://raw.githubusercontent.com/mrowa44/emojify/master/emojify -o /usr/local/bin/emojify && chmod +x /usr/local/bin/emojify"
 # https://github.com/mrowa44/emojify
 
-# lists files 
+# lists files
 ls
 
 # lists files hidden file and directories
@@ -16,7 +16,7 @@ ls -a
 ls -l
 
 # list the present working directory
-pwd 
+pwd
 
 # the . indicates the current directory
 # the .. indicate the parent directory
@@ -49,12 +49,15 @@ mkdir folder
 # remove a directory
 rmdir folder
 
+# recursively and forcefully remove directories and their contents
+rm -rf folder
+
 # bang (!) repeats the last command starting with the first letter after it
 !t  # executes 'touch original.txt'
 
-# write a line of text to standard output 
+# write a line of text to standard output
 # the file descriptor for standard output (stdout) is 1
-echo "Hello World" 
+echo "Hello World"
 
 # print without a new line
 echo -n "Hello World"
@@ -75,14 +78,16 @@ echo $((1+1))
 echo {A..Z}
 
 # print out the first ten lines of a file
-# you can also use the -n option to specify how many lines you want 
+# you can also use the -n option to specify how many lines you want
 head original.txt
 
 # you can print out the last few lines of a file using tail
-# you can monitor a file as it gets updated with the -f option
+# you can monitor a file as it gets updated with the -f option, for example follow the last 10 lines with -10f
 tail original.txt
 
-# show the environment variables 
+tail -10f original.txt
+
+# show the environment variables
 env
 
 # show the current PATH
@@ -103,6 +108,9 @@ echo $MESSAGE | cut -c1-4
 # count how characters there are in a string (-w for words)
 echo $MESSAGE | wc -c
 
+#As an alternative to echo, can use printf
+printf $MESSAGE
+
 greeting="HELLO"
 
 # translate all uppercase characters to lowercase
@@ -114,7 +122,7 @@ echo $greeting | tr [A-Z] [a-z]
 # show the type of the a file
 file original.txt
 
-# download a file from the web 
+# download a file from the web
 curl -o readme.txt https://raw.github.com/tacksoo/bash_basics/master/README.md
 
 # download file with its original filename
@@ -133,7 +141,7 @@ tar cvf archive.tar somedir
 tar zcvf archive.tar.gz somedir
 
 # unarchive the contents of an archive
-tar xvf archive.tar.gz  
+tar xvf archive.tar.gz
 
 # list contents of an archive
 tar tf archive.tar.gz
@@ -150,7 +158,7 @@ gzip -c somefile > somefile.gz
 # decompress a file and keep original
 gzip -cd somefile.gz > somefile
 
-# bzip2 can offer better compression and can be used just like gzip 
+# bzip2 can offer better compression and can be used just like gzip
 
 # https://gist.githubusercontent.com/tacksoo/dbb221a6ea2c605cf59e/raw/d05e22635ce4d1a67c52c0180fbf5a34d25460bc/words.txt
 
@@ -188,7 +196,14 @@ grep 'the$' readme.txt
 # check every file in the current directory for the word 'the' and print out the filename
 grep -l 'the' *
 
-# sorts a text file line by line lexicographically  
+# search for file in the current directory
+ls | grep file
+
+# Create a file called file.sh and change the permissions of a file
+touch file.sh
+chmod u+x file.sh
+
+# sorts a text file line by line lexicographically
 sort readme.txt
 
 # sort and print only unique lines
@@ -197,14 +212,14 @@ sort -u readme.txt
 # reverse sort
 sort -r readme.txt
 
-# do a numeric sort  i.e. 10 appears after 9 not 1 
+# do a numeric sort  i.e. 10 appears after 9 not 1
 sort -n readme.txt
 
 # sort from a particular field, in this case start sorting from field 2 and end at field 2
 sort -k2,2 readme.txt
 
 # the stream editor command is useful for adding/deleting/changing words in a text file
-# the following command appends the word 'Start: ' at the beginning of every line 
+# the following command appends the word 'Start: ' at the beginning of every line
 sed 's/^/Start: /' readme.txt
 
 # this would only apply to the first five lines
@@ -213,23 +228,23 @@ sed '1,5s/^/Start: /' readme.txt
 # you can also delete words using sed, the following will delete all the words 'the'
 sed 's/the//' readme.txt
 
-# of course you can also replace words 
+# of course you can also replace words
 sed 's/teh/the/' readme.txt
 
 # comment out any statement that starts with Log
 sed 's/Log/\/\/&/' readme.txt
 
 # delete all leading spaces of a string
-sed 's/^[ \t]*//' readme.txt  
+sed 's/^[ \t]*//' readme.txt
 
 # find out the access, modify, and change time for a file
 stat readme.txt
 
 # find all the files ending with .txt from the current directory
-find . -name '*.txt' -print 
+find . -name '*.txt' -print
 
 # find all files that were modified later than readme.txt
-find . -newer readme.txt -print 
+find . -newer readme.txt -print
 
 # find all files created in the last 3 days (ctime, mtime, atime)
 find . -ctime -3 -print
@@ -251,13 +266,13 @@ find . -type f -print0 | xargs -0 grep 'the'
 cat << EOF
 
    Write a wall of text without echo commands
-   
+
 EOF
 
 # show today's date and time
 date
 
-# show today's date with different time zone: 
+# show today's date with different time zone:
 # change the TZ variable to TZ="America/New_York", TZ="Asia/Seoul", TZ="Europe/Berlin", etc
 TZ="America/Los_Angeles" date
 
@@ -279,7 +294,7 @@ fortune  # note: you need to add /usr/games to your path
 # create a one megabyte file filled with zeros
 dd if=/dev/zero of=foobar count=1 bs=1M
 
-# show listening ports and attached processes 
+# show listening ports and attached processes
 netstat -nlp
 
 # http://explainshell.com/explain?cmd=iptables+-t+nat+-A+PREROUTING+-p+tcp+--dport+80+-j+REDIRECT+--to-port+8080
