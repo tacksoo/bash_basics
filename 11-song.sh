@@ -39,3 +39,6 @@ case $note in
 esac
 
 done
+
+# exercise: Change the input question and case 
+# statement to another theme. 
