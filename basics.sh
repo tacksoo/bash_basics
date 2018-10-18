@@ -6,6 +6,12 @@
 # sudo sh -c "curl https://raw.githubusercontent.com/mrowa44/emojify/master/emojify -o /usr/local/bin/emojify && chmod +x /usr/local/bin/emojify"
 # https://github.com/mrowa44/emojify
 
+# ssh into your machine
+ssh root@your-ip-address
+
+# transfer file with sftp
+sftp root@your-ip-address 
+
 # lists files
 ls
 
