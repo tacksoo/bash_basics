@@ -146,6 +146,15 @@ tar xvf archive.tar.gz
 # list contents of an archive
 tar tf archive.tar.gz
 
+# compress file into zip file that can be decompressed in mac and windows
+zip somefile.zip somefile
+
+# compress folder into zip file 
+zip -r somefile.zip somedir
+
+# decompress zip file
+unzip somefile.zip
+
 # compress a file and see the original go away
 gzip somefile
 
