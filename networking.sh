@@ -9,3 +9,6 @@ netstat -nlp
 
 # http://explainshell.com/explain?cmd=iptables+-t+nat+-A+PREROUTING+-p+tcp+--dport+80+-j+REDIRECT+--to-port+8080
 iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 8080
+
+# to setup auto login when using ssh, please read the following document
+# http://www.rebol.com/docs/ssh-auto-login.html
