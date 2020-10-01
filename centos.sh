@@ -12,3 +12,17 @@ cat /etc/redhat-relase
 
 # update packages
 yum update
+
+#kernel version check
+uname -r
+
+#yum cache clean
+yum clean all
+
+#memory usage
+free -h
+
+#free cache memory
+echo 3>/proc/sys/vm/drop_caches
+
+
