@@ -277,6 +277,13 @@ find . -type f | xargs grep 'the'
 # http://serverfault.com/questions/268368/how-can-i-handle-spaces-in-file-names-when-using-xargs-on-find-results
 find . -type f -print0 | xargs -0 grep 'the'
 
+# look for a files in a directory starting with extenson .txt and delete files which are n number of days old 
+# Note : In place of InputPath and InputNumberofdaysoldfile pass your path and number of days old to delete files from that path
+
+InputPath='/folder/demo/'
+InputNumberofdaysoldfile=30
+find $InputPath -name "*.txt" -type f -mtime +${InputNumberofdaysoldfile} -exec rm -f {} \;
+
 # heredoc http://en.wikipedia.org/wiki/Here_document
 cat << EOF
 
