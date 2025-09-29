@@ -10,3 +10,5 @@ sudo apt --allow-releaseinfo-change update
 # install Java 17
 sudo apt install openjdk-17-jdk
 
+# add a user to sudoers list
+usermod -aG sudo yourusername
