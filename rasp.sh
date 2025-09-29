@@ -11,4 +11,4 @@ sudo apt --allow-releaseinfo-change update
 sudo apt install openjdk-17-jdk
 
 # add a user to sudoers list
-usermod -aG sudo yourusername
+sudo usermod -aG sudo yourusername
