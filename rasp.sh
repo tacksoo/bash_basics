@@ -12,3 +12,9 @@ sudo apt install openjdk-17-jdk
 
 # add a user to sudoers list
 sudo usermod -aG sudo yourusername
+
+# start python virtual environment
+python -m venv ~/myproject
+
+# activiate virtual environment
+source ~/myproject/bin/activate
