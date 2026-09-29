@@ -111,6 +111,9 @@ echo $MESSAGE | cut -f3 -d" "
 # cut out the first four characters
 echo $MESSAGE | cut -c1-4
 
+# extract usernames and login shells from /etc/passwd using ':' delimiter
+cut -d':' -f1,7 /etc/passwd | head -n 5
+
 # count how characters there are in a string (-w for words)
 echo $MESSAGE | wc -c
 
